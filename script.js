@@ -1,4 +1,4 @@
-const container = document.querySelector('container');
+const container = document.querySelector("#container");
 
 function createBoxes(boxNum) {
    for (let i = 0; i < boxNum * boxNum; i++){
