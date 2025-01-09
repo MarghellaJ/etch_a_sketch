@@ -1,5 +1,11 @@
 // declartions
 const container = document.querySelector("#container");
+const body = document.querySelector("body");
+
+const gridSize = document.createElement("button");
+gridSize.textContent = "select grid size";
+body.appendChild(gridSize);
+
 
 
 function getRandomColor() {
@@ -59,4 +65,4 @@ function createDivs(divNum) {
 console.log(divNum);
 }
 //Create x number of divs
-createDivs(16)
+createDivs(4)
