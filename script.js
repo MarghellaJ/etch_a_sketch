@@ -2,18 +2,32 @@
 const container = document.querySelector("#container");
 const body = document.querySelector("body");
 
+//create a button
 const gridSize = document.createElement("button");
+// add attributes or content
 gridSize.textContent = "select grid size";
+gridSize.addEventListener('click', function() {
+   createDivs(0);
+   const gridChoice = prompt("Select grid size 0-100");
+   createDivs(gridChoice);
+})
+// append to the body
 body.appendChild(gridSize);
 
 
 
 function getRandomColor() {
-   const letters = '0123456789ABCDEF';
+   // declare letters and numbers of hex color code
+   const letters = '0123456789ABCDEF'; 
+   
+   // the color selection will be a hex color code ie #0076h4
    let color = '#';
+   
+   // loop through and get a random hex color code using Math.floor and random
    for (let i = 0; i < 6; i++) {
       color += letters[Math.floor(Math.random() * 16)];
    }
+   // return the hex color code
    return color;
 }
 
@@ -65,4 +79,4 @@ function createDivs(divNum) {
 console.log(divNum);
 }
 //Create x number of divs
-createDivs(4)
+// createDivs(12)
