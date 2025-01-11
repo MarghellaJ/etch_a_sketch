@@ -17,15 +17,17 @@ sizeBtn.addEventListener('click', function () { // eventListener for button clic
 // append to the body
 body.appendChild(sizeBtn);
 
-// const resetBtn = document.createElement("button");
+const resetBtn = document.createElement("button");
 
-// resetBtn.textContent = "Reset Board";
-// resetBtn.classList = "#reset";
-// resetBtn.addEventListener('click', () => {
-//    createDivs(userInput);
-// })
+resetBtn.textContent = "Reset Board";
+resetBtn.style = "background-color: red; border: 5px solid green;"
+resetBtn.classList = "#reset";
+resetBtn.addEventListener('click', () => {
+   cleanUp();
+   createDivs(16);
+})
 
-// body.appendChild(resetBtn);
+body.appendChild(resetBtn);
 
 function cleanUp() {
    // clear screen when userInput entered so grids aren't overlapping
