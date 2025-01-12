@@ -17,6 +17,7 @@ sizeBtn.addEventListener('click', function () { // eventListener for button clic
 // append to the body
 body.appendChild(sizeBtn);
 
+// Reset button block - resets to 16x16
 const resetBtn = document.createElement("button");
 
 resetBtn.textContent = "Reset Board";
@@ -29,8 +30,8 @@ resetBtn.addEventListener('click', () => {
 
 body.appendChild(resetBtn);
 
+// Clear screen when userInput entered so grids aren't overlapping
 function cleanUp() {
-   // clear screen when userInput entered so grids aren't overlapping
    if (container.innerHTML != "")
       container.innerHTML = "";
 }
@@ -63,13 +64,19 @@ function createDivs(divNum) {
       for (let j = 1; j <= divNum; j++) {
          const row = document.createElement('div');
          row.addEventListener('mouseover', function () {
-            // Add hover effect
+            // Add hover effect to change color
             row.style.backgroundColor = getRandomColor();
+
+            // *Needs finished -- 
+            // if cell is empty add random color
+            // else if cell has random color already
+                  // change the opacety by 10% every hover to full opacity and more change
+
          });
 
          // Add content or attributes
          row.classList.add("row");
-         row.style.border = "2px solid black";
+         row.style.border = "1px solid pink";
          // row.textContent = (i * divNum) + j;
          row.textContent = '*';
 
